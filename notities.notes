@@ -1,0 +1,15 @@
+-= inked list -=
+- een linked list heef data op random
+memory plekken maar ze zijn gelinkt door een pointer naar een ander 
+variable
+- head is begin van linked list 
+- tail is eind linked list (heeft None als next)
+pros :
+- ! insert of delete element op begin O(1) !
+- ! insert delete ergens anders O(n) !
+- ! insert is makkelijker
+- ! je hoeft niet meer geheugen te maken dan je nodig hebt
+- ! traversal O(n)
+
+cons :
+- ! traversal is O(n) en niet O(1)
