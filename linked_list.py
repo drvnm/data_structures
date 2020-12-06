@@ -80,7 +80,6 @@ class LinkedList:
         count = 0
         itr = self.head
         while itr:
-            1
             if count == idx - 1:
                 node = Node(value, itr.next)
                 itr.next = node
@@ -88,11 +87,29 @@ class LinkedList:
             itr = itr.next
             count += 1
 
+    def insert_after_value(self, data_after, data_to_insert):
+        itr = self.head
+        count = 0
+        while itr:
+            if itr.data == data_after:
+                itr.next = Node(data_to_insert, itr.next)
+                break
+            itr = itr.next
+            count += 1
+
+    def remove_by_value(self, data):
+        itr = self.head
+        count = 0
+        while itr:
+            if itr.data == data:
+                self.remove(count)
+                break
+            itr = itr.next
+            count += 1
+
 
 ll = LinkedList()
-ll.insert_values([1, 2, 3])
-ll.print()
-
-ll.insert_at(2, 3)
+ll.insert_values([1, 2, 3, 4, 5])
+ll.insert_after_value(5, 'e')
 ll.print()
 print(len(ll))
